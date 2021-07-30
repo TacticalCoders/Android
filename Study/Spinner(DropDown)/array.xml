@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="test">
+
+        <item>삭제</item>
+        <item>수정</item>
+        <item>상세정보</item>
+
+    </string-array>
+</resources>
