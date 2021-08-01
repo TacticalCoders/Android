@@ -1,0 +1,52 @@
+1. https://console.firebase.google.com에서 프로젝트를 생성한다. 
+
+2. 안드로이드 아이콘을 클릭한다.
+
+3. 안드로이트 프로젝트의 패키지 경로를 입력한다.
+
+4. 생성된 google-service.json파일을 복사하여 프로젝트 app폴더에 붙여넣기 한다.
+
+5. build.gradle 파일을 다음과 같이 수정한다.
+
+ -  프로젝트 수준의 build.gradle (<project>/build.gradle):
+ 
+     buildscript {
+      repositories {
+        // Check that you have the following line (if not, add it):
+        google()  // Google's Maven repository
+      }
+      dependencies {
+        ...
+        // Add this line
+        classpath 'com.google.gms:google-services:4.3.8'
+      }
+    }
+
+    allprojects {
+      ...
+      repositories {
+        // Check that you have the following line (if not, add it):
+        google()  // Google's Maven repository
+        ...
+      }
+    }
+
+  - 앱 수준의 build.gradle (<project>/<app-module>/build.gradle):
+  
+  
+    apply plugin: 'com.android.application'
+    // Add this line
+    apply plugin: 'com.google.gms.google-services'
+
+    dependencies {
+      // Import the Firebase BoM
+      implementation platform('com.google.firebase:firebase-bom:28.3.0')
+
+      // Add the dependencies for the desired Firebase products
+      // https://firebase.google.com/docs/android/setup#available-libraries
+    }
+    
+    
+    6. Sycn now 버튼을 클릭하여 동기화 한다.
+    
+    7. 나머지는 코드 참조.
