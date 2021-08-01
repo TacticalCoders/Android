@@ -29,7 +29,7 @@ public class FirebaseMessagingService extends com.google.firebase.messaging.Fire
 
         PendingIntent contentIntent = PendingIntent.getActivity(this,0,new Intent(this,MainActivity.class),0);
 
-        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this).setSmallIcon(R.mipmap.ic_launcher)
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this,"test").setSmallIcon(R.mipmap.ic_launcher)
                 .setContentTitle(title)
                 .setContentText(msg)
                 .setAutoCancel(true)
