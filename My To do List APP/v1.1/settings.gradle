@@ -1,0 +1,2 @@
+rootProject.name = "RecyclerVIewEx2"
+include ':app'
