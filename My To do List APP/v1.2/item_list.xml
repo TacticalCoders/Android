@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="5dp">
+
+    <ImageButton
+        android:id="@+id/btn_check"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:src="@mipmap/ic_launcher_round"/>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="인프런 강좌 수강하기"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_gravity="center"/>
+
+
+</LinearLayout>
