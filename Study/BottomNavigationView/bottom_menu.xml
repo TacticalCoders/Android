@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:icon="@drawable/home"
+        android:title="홈"/>
+
+    <item
+        android:id="@+id/todolist"
+        android:enabled="true"
+        android:icon="@drawable/to_do_list"
+        android:title="오늘할일"/>
+
+    <item
+        android:id="@+id/checked"
+        android:enabled="true"
+        android:icon="@drawable/checked"
+        android:title="완료한일"/>
+
+    <item
+        android:id="@+id/calendar"
+        android:enabled="true"
+        android:icon="@drawable/calendar"
+        android:title="일정"/>
+
+    <item
+        android:id="@+id/setting"
+        android:enabled="true"
+        android:icon="@drawable/settings"
+        android:title="환경설정"/>
+
+</menu>
