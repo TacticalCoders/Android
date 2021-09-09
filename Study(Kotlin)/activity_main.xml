@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" /!-- 안드로이드 내부에 정의된 태그이름과 속성 사용 --/
+    xmlns:app="http://schemas.android.com/apk/res-auto" /!-- 안드로이드 외부 라이브러리에서 정의한 태그 이름과 속성 사용 (constraintlayout이 외부 라이브러리이기 때문) --/
+    xmlns:tools="http://schemas.android.com/tools" 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
