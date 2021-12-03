@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single" >
+        <item
+            android:id="@+id/menu_apple"
+            android:icon="@drawable/ic_menu_add"
+            android:title="사과"
+            app:showAsAction="ifRoom|withText"/>
+        <item
+            android:id="@+id/menu_grape"
+            android:icon="@android:drawable/ic_menu_delete"
+            android:title="포도"
+            app:showAsAction="ifRoom|withText"/>
+        <item
+            android:id="@+id/menu_banana"
+            android:icon="@android:drawable/ic_menu_manage"
+            android:title="바나나"
+            app:showAsAction="ifRoom|withText"/>
+    </group>
