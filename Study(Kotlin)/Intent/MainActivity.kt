@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 
-const val EXTRA_MESSAGE = "com.example.intentsample.MESSAGE"
+const val EXTRA_MESSAGE = "com.example.intentsample.MESSAGE" //클래스 밖에서 const val로 선언했기 때문에 SubActivity에서도 접근 가능!
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
