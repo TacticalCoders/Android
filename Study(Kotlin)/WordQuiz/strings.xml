@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">WordQuiz</string>
+    <string name="str_quiz">다음 의미에 맞는 단어는?</string>
+    <string name="next_button">Next</string>
+    <string name="prev_button">Previous</string>
+    <string name="right_ans_msg">정답입니다.</string>
+    <string name="wrong_ans_msg">오답입니다.</string>
+    <string name="hint_button">Hint</string>
+    <string name="back_button">Back</string>
+    <string name="hint_message">다음에는 Hint 없이 정답을 맞추세요.</string>
+</resources>
