@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="planets_array">
+        <item>수성(Mercury)</item>
+        <item>금성(Venus)</item>
+        <item>지구(Earth)</item>
+        <item>화성(Mars)</item>
+        <item>목성(Jupiter)</item>
+        <item>토성(Saturn)</item>
+        <item>천왕성(Uranus)</item>
+        <item>명왕성(Neptune)</item>
+    </string-array>
+</resources>
