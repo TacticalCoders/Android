@@ -2,7 +2,10 @@ package com.inu.appcenter.retrofitstudy
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
+import android.widget.EditText
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import retrofit2.Call
@@ -35,31 +38,48 @@ class MainActivity : AppCompatActivity() {
 
         val client = retrofit.create(GithubService::class.java)
 
-        val call = client.getRepos(user)
-        call.enqueue(object: Callback<List<GitHubRepo>> {
-            override fun onFailure(call: Call<List<GitHubRepo>>, t: Throwable) {
-                Log.e("error", "${t.message}")
+
+        val search:EditText = findViewById(R.id.et_search)
+        search.addTextChangedListener(object : TextWatcher{
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
             }
 
-            override fun onResponse(
-                call: Call<List<GitHubRepo>>,
-                response: Response<List<GitHubRepo>>
-            ) {
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
 
-                if(response.isSuccessful){
-                    Log.d("응답 성공!", "onResponse is Successful!")
-                    list.clear()
-                    val repos = response.body()
-                    repos?.forEach {
-                        list.add("${it.name}")
+                val call = client.getRepos(s.toString())
+                call.enqueue(object: Callback<List<GitHubRepo>> {
+                    override fun onFailure(call: Call<List<GitHubRepo>>, t: Throwable) {
+                        Log.e("error", "${t.message}")
                     }
-                    repoList.adapter = RepoAdapter(list)
-                } else
-                {
-                    Log.e("error", "response is not Successful")
-                }
+
+                    override fun onResponse(
+                        call: Call<List<GitHubRepo>>,
+                        response: Response<List<GitHubRepo>>
+                    ) {
+
+                        if(response.isSuccessful){
+                            Log.d("응답 성공!", "onResponse is Successful!")
+                            list.clear()
+                            val repos = response.body()
+                            repos?.forEach {
+                                list.add("${it.name}")
+                            }
+                            repoList.adapter = RepoAdapter(list)
+                        } else
+                        {
+                            Log.e("error", "response is not Successful")
+                        }
+                    }
+                })
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+
             }
         })
+
 
     }
 }
